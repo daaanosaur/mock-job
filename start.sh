@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 SECONDS=${SECONDS_TO_RUN:-10}
 CODE=${EXIT_CODE:-0}
