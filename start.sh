@@ -1,12 +1,12 @@
 #!/bin/sh
 
-SECRET_FILE=${SECRET_FILE}
+SECRET_FILE=${SECRET_FILE:-false}
 SECONDS=${SECONDS_TO_RUN:-10}
 CODE=${EXIT_CODE:-0}
 
-if test -f ${SECRET_FILE}; then
-    echo "Reading ${SECRET_FILE}: "
-    cat ${SECRET_FILE}; echo
+if test -f $SECRET_FILE; then
+    echo "Reading $SECRET_FILE: "
+    cat $SECRET_FILE; echo
 fi
 
 if [[ $CODE -lt 0 || $CODE -gt 255 ]]; then
